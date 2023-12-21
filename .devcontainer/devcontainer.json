@@ -132,6 +132,31 @@
     //  Whether to overwrite the command specified in the image. The default is true.
     //"overrideCommand": "TODO true OR false(default) [OPTIONAL][non-docker-compose]"
 
+
+    //  Tool-specific configuration. Each tool should use a JSON object subproperty with a unique name to group its customizations."
+    //"customizations": {
+    //    "vscode": {
+    //        "settings": {
+    //            // Terminal settings
+    //            "terminal.integrated.profiles.linux": {
+    //                "bash": {
+    //                    "path": "/bin/bash",
+    //                    "icon": "terminal-bash"
+    //                }
+    //            },
+    //            "terminal.integrated.defaultProfile.linux": "bash",
+    //            // Other lanuguage or extension specific settings...
+    //        },
+    //        "extensions": [
+                // Basic extensions are specified in Settings > Extensions > Dev Containers > Default Extensions (Applies to all profiles)
+                // My detailed list of extensions see here: https://gist.github.com/DaniDeer/6d6e63d82d47a6e798f5b9690d9fc798
+                // e.g. "editorconfig.editorconfig" (file already in the root folder)
+                
+                // Other extensions specific for this devcontainer...
+    //        ]
+    //    }
+    //}
+
 }
 
 
