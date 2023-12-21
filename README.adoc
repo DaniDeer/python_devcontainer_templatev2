@@ -1,0 +1,10 @@
+= python_devcontainer_templatev2
+
+:toc:
+:toclevels: 5
+:imagesdir: docs/images
+
+[%autowidth, frame="sides", grid=none]
+|===
+a|image::python_devcontainer.png[width=200] | This is a devcontainer template to start Python projects. The goal is to have everything at hand to start a Python project quickly. You can choose to go with a simple Dockerfile or with docker-compose.
+|===
