@@ -5,12 +5,7 @@
 {
 	//"name": "Python 3",
 
-
-    //  Build from an image:
-    //"image": "TODO Add image name here",
-    //"workspaceFolder": "TODO add the path of the workspace folder inside the container [OPTIONAL]",
-    //"workspaceMount": "TODO add --mount parameter for docker run. The default is to mount the project folder at /workspaces/$project [OPTIONAL]",
-
+  
     //  Build from a Dockerfile:
     //"build": {
     //    "dockerfile": "Dockerfile",
@@ -25,15 +20,6 @@
     //},
     //"workspaceFolder": "TODO add the path of the workspace folder inside the container [OPTIONAL]",
     //"workspaceMount": "TODO add --mount parameter for docker run. The default is to mount the project folder at /workspaces/$project [OPTIONAL]",
-
-    //  Build with docker-compose:
-    //"dockerComposeFile": "TODO add a docker-compose.yml here",
-    //"service": "TODO add a service name here",
-    //"runServices": ["TODO add a services here [OPTIONAL]"],
-    //"workspaceFolder": "TODO add the path of the workspace folder inside the container. Typically the target path of a volume mount the in docker-compose.yml",
-    //"workspaceMount": "TODO add --mount parameter for docker run. The default is to mount the project folder at /workspaces/$project [OPTIONAL]",
-    //"shutdownAction": "TODO action to take when disconnecting from container: 'none' OR 'stopCompose'(default) [OPTIONAL]",
-    //"overrideCommand": "TODO overwrite the command specified in the image, true or false(default) [OPTIONAL]"
 
 
 	//  Features to add to the dev container. More info: https://containers.dev/features.
@@ -158,7 +144,3 @@
     //}
 
 }
-
-
-
-	
