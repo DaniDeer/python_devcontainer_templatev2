@@ -3,23 +3,16 @@
 // For config options, see the README at: 
 // https://github.com/DaniDeer/python_devcontainer_templatev2
 {
-	//"name": "Python 3",
+	"name": "Python 3",
 
-  
-    //  Build from a Dockerfile:
-    //"build": {
-    //    "dockerfile": "Dockerfile",
-    //    "context": "..",
-    //    "buildOptions": {
-    //        "target": "TODO Add target stage here [OPTIONAL]",
-    //        "args": {
-    //            "TODO": "Add build args here [OPTIONAL]"
-    //        },
-    //        "cacheFrom": ["TODO: Add cache image(s) here [OPTIONAL]"]
-    //    }
-    //},
-    //"workspaceFolder": "TODO add the path of the workspace folder inside the container [OPTIONAL]",
-    //"workspaceMount": "TODO add --mount parameter for docker run. The default is to mount the project folder at /workspaces/$project [OPTIONAL]",
+    //  Build with docker-compose:
+    "dockerComposeFile": "TODO add a docker-compose.yml here",
+    "service": "devcontainer",
+    //"runServices": ["TODO add a services here [OPTIONAL]"],
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+    "shutdownAction": "stopCompose",
+    //"overrideCommand": "TODO overwrite the command specified in the image, true or false(default) [OPTIONAL]"
 
 
 	//  Features to add to the dev container. More info: https://containers.dev/features.

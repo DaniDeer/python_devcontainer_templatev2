@@ -3,6 +3,10 @@ FROM debian:bookworm-20231030-slim as devcontainer
 # Operate APT in a non-interactive mode to prevent prompting the user for input
 ARG DEBIAN_FRONTEND=noninteractive
 
+# Get the PROJECT environment variable from the devcontainer-compose.yml
+ARG PROJECT
+ENV PROJECT=${PROJECT}
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates=20230311 \
@@ -44,6 +48,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
     && mkdir /workspace \
     && chown $USERNAME /workspace \
+    && mkdir /workspace/${PROJECT} \
+    && chown $USERNAME /workspace/${PROJECT} \
     && mkdir /workspace/tmp \
     && chown $USERNAME /workspace/tmp \
     # add other directories ...
