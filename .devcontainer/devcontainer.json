@@ -1,0 +1,139 @@
+// For format details, see https://aka.ms/devcontainer.json. and
+// here https://containers.dev/implementors/json_schema/
+// For config options, see the README at: 
+// https://github.com/DaniDeer/python_devcontainer_templatev2
+{
+	"name": "Python 3",
+
+    //  Build with docker-compose:
+    "dockerComposeFile": "TODO add a docker-compose.yml here",
+    "service": "devcontainer",
+    //"runServices": ["TODO add a services here [OPTIONAL]"],
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+    "shutdownAction": "stopCompose",
+    //"overrideCommand": "TODO overwrite the command specified in the image, true or false(default) [OPTIONAL]"
+
+
+	//  Features to add to the dev container. More info: https://containers.dev/features.
+	//"features": {TODO: Add feature ids here [OPTIONAL]},
+    //"overrideFeatureInstallOrder": ["TODO: Add feature ids in the order you want them installed [OPTIONAL]"],
+
+
+	//  Use 'forwardPorts' to make a list of ports inside the container available locally.
+	//"forwardPorts": ["TODO: ports that are forwarded from the container to the local machine (int or str'host:port') [OPTIONAL]"],
+    //"portsAttributes": {
+        // See https://containers.dev/implementors/json_schema for more information.
+        // [OPTIONAL]
+    //},
+    //"otherPortsAttributes": {
+        // See https://containers.dev/implementors/json_schema for more information.
+        // [OPTIONAL]
+    //}
+
+
+    //  Control whether on Linux the container's user should be updated with the local user's UID and GID.  
+    //"updateRemoteUserUID": "TODO: true OR false, On by default when opening from a local folder [OPTIONAL]"
+
+    //  Remote environment variables to set for processes spawned in the container including lifecycle scripts and any remote editor/IDE server process.
+    //"remoteEnv": {
+        // "key=value"
+        // [OPTIONAL]
+    //}
+
+    //  Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	//"remoteUser": "root" [RECOMMENDED]
+
+
+    //  Commands for certain container states.
+    //  For every command note: If this is a single string, it will be run in a shell. If this is an array of strings, it will be run as a single command without shell.
+    //  Runs locally before anything else. Runs before 'onCreateCommand'. 
+    //"initializeCommand": "TODO add a command here [OPTIONAL]",
+    //  Runs when creating the container. Runs after 'initializeCommand' and before 'updateContentCommand'.
+    //"onCreateCommand": "TODO add a command here [OPTIONAL]",
+    //  Runs when creating the container and rerun when the workspace content was updated while creating the container. Runs after 'onCreateCommand' and before 'postCreateCommand'. 
+    //"updateContentCommand": "TODO add a command here [OPTIONAL]",
+    //  Runs after creating the container. Runs after 'updateContentCommand' and before 'postStartCommand'. 
+    //"postCreateCommand": "TODO add a command here [OPTIONAL]",
+    //  Runs after starting the container. Runs after 'postCreateCommand' and before 'postAttachCommand'.
+    //"postStartCommand": "TODO add a command here [OPTIONAL]",
+    //  Runs when attaching to the container. This command is run after 'postStartCommand'. 
+    //"postAttachCommand": "TODO add a command here [OPTIONAL]",
+    //  The user command to wait for before continuing execution in the background while the UI is starting up. The default is 'updateContentCommand'.
+    //"waitFor": "TODO Add on command of above as string here [OPTIONAL]"
+    //  User environment probe to run. The default is 'loginInteractiveShell'
+    //"userEnvProbe": "TODO select 'none', 'loginShell', 'loginInteractiveShell', 'interactiveShell' [OPTIONAL]"
+    
+    //  Host hardware requirements.
+    //"hostRequirements": {
+        // See https://containers.dev/implementors/json_schema for more information.
+        // [OPTIONAL]
+    //},
+
+
+    //  NOTE: The following settings CAN apply when devcontainer is NOT based on docker-compose.
+    //  But the settings give a grasp what is possible with docker-compose.
+
+
+    //  Application ports that are exposed by the container. This can be a single port or an array of ports. Each port can be a number or a string. 
+    //  A number is mapped to the same port on the host. A string is passed to Docker unchanged and can be used to map ports differently, e.g. "8000:8010"
+    //"appPort": ["TODO: Add port number here [OPTIONAL]"],
+
+    //  Container environment variables
+    //"containerEnv": {
+        // "key=value"
+        // [OPTIONAL]
+    //},
+    
+    //  The user the container will be started with. The default is the user on the Docker image.
+    //"containerUser": "TODO: Add user name here [OPTIONAL]",
+
+    //  Mount points to set up when creating the container (but also restarting...). Follows Docker's --mount option syntax.
+    //"mounts": [
+        //{
+        //    "source": "TODO: Add source path here",
+        //    "target": "TODO: Add target path here",
+        //    "type": "TODO: Add mount type here"
+        //}
+        // See https://containers.dev/implementors/json_schema for more information.
+        // [OPTIONAL]
+    //],
+
+    //  The arguments required when starting in the container (can also be specified in docker-compose.yml). E.g. "--network=host" 
+    //"runArgs": [
+        // See https://containers.dev/implementors/json_schema for more information.
+        // [OPTIONAL]
+    //],
+
+    //  Action to take when the user disconnects from the container in their editor. The default is 'stopCompose'.
+    //"shutdownAction": "TODO 'none' OR 'stopContainer' [OPTIONAL][non-docker-compose]",
+
+    //  Whether to overwrite the command specified in the image. The default is true.
+    //"overrideCommand": "TODO true OR false(default) [OPTIONAL][non-docker-compose]"
+
+
+    //  Tool-specific configuration. Each tool should use a JSON object subproperty with a unique name to group its customizations."
+    //"customizations": {
+    //    "vscode": {
+    //        "settings": {
+    //            // Terminal settings
+    //            "terminal.integrated.profiles.linux": {
+    //                "bash": {
+    //                    "path": "/bin/bash",
+    //                    "icon": "terminal-bash"
+    //                }
+    //            },
+    //            "terminal.integrated.defaultProfile.linux": "bash",
+    //            // Other lanuguage or extension specific settings...
+    //        },
+    //        "extensions": [
+                // Basic extensions are specified in Settings > Extensions > Dev Containers > Default Extensions (Applies to all profiles)
+                // My detailed list of extensions see here: https://gist.github.com/DaniDeer/6d6e63d82d47a6e798f5b9690d9fc798
+                // e.g. "editorconfig.editorconfig" (file already in the root folder)
+                
+                // Other extensions specific for this devcontainer...
+    //        ]
+    //    }
+    //}
+
+}
